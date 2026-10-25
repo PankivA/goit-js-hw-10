@@ -1,13 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GoIT · Домашнє завдання</title>
+    <title>GoIT · Домашнє завдання 10</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!-- Розмітку додавай тут за технічним завданням -->
+    <form class="form">
+      <label>
+        Напій
+        <select name="drink">
+          <option value="Еспресо">Еспресо · 1000 ms</option>
+          <option value="Капучино" selected>Капучино · 2000 ms</option>
+          <option value="Лате">Лате · 3000 ms</option>
+          <option value="Флет-вайт">Флет-вайт · 4000 ms</option>
+          <option value="Раф">Раф · 5000 ms</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Рішення бариста</legend>
+        <label>
+          <input type="radio" name="state" value="fulfilled" checked required />
+          Прийняти
+        </label>
+        <label>
+          <input type="radio" name="state" value="rejected" required />
+          Відхилити
+        </label>
+      </fieldset>
+
+      <button type="submit">Оформити замовлення</button>
+    </form>
+
+    <ul class="order-log"></ul>
 
     <script type="module" src="./main.js"></script>
   </body>

@@ -1,10 +1,75 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 0 16px;
+  color: #2b2019;
+  color-scheme: light;
 }
 
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid #e8ddd1;
+  border-radius: 12px;
+}
+
+.form>label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+select,
+button {
+  font: inherit;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e8ddd1;
+}
+
+fieldset {
+  display: flex;
+  gap: 16px;
+  border: 1px solid #e8ddd1;
+  border-radius: 8px;
+}
+
+button[type="submit"] {
+  background: #b0673b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.order-log {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-log li {
+  padding: 10px 12px;
+  border: 1px solid #e8ddd1;
+  border-left: 3px solid #8a7a6d;
+  border-radius: 8px;
+  font-family: ui-monospace, monospace;
+}
+
+.order-log li.row-pending {
+  border-left-color: #8a7a6d;
+  color: #8a7a6d;
+}
+
+.order-log li.row-ok {
+  border-left-color: #2e7d53;
+}
+
+.order-log li.row-err {
+  border-left-color: #c0473b;
 }
